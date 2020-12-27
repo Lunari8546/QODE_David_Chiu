@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #24252A;
+    font-family: 'Titillium Web', sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 10%;
+}
+
+.logo {
+    color: #EDF0F1;
+    font-family: 'Lora', serif;
+    font-weight: 300;
+    cursor: pointer;
+    transition: letter-spacing 0.5s ease;
+    letter-spacing: -2px;
+}
+
+.logo:hover {
+    letter-spacing: 4px;
+}
+
+.nav-links {
+    list-style-type: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav-links li a {
+    font-size: 18px;
+    transition: color 0.4s ease 0s;
+    cursor: pointer;
+}
+
+.nav-links li a:hover {
+    color: #0088A9;
+}
+
+.nav-links li, .nav-links a {
+    font-weight: 500;
+    font-size: 16px;
+    color: #EDF0F1;
+    text-decoration: none;
+}
+
+.timetable-canvas {
+    width: 85%;
+    margin: 20px auto;
+    color: #EDF0F1;
+    text-align: center;
+}
+
+.timetable-title {
+    text-align: center;
+    color: #EDF0F1;
+    font-size: 30px;
+    font-family: 'Lora', serif;
+    border: none;
+    border-bottom: 1px solid #EDF0F1;
+    padding-bottom: 20px;
+    outline: none;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.timetable-input {
+    text-align: center;
+    color: #EDF0F1;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    width: 115px;
+}
+
+table {
+    padding: 10px;
+    border: 1px solid #EDF0F1;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+
+tr td {
+    padding: 10px;
+    border: 1px solid #EDF0F1;
+    margin: 0 auto;
+}
+
+tr td input, b {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.customize-section, .FAQ-section {
+    display: none;
+    overflow: hidden;
+    color: #EDF0F1;
+}
+
+.customize-slot {
+    margin: 60px auto;
+    border-bottom: 1px solid #EDF0F1;
+    width: 60%;
+}
+
+.customize-title {
+    font-weight: 300;
+    font-family: 'Lora', serif;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.customize-settings {
+    line-height: 35px;
+    margin-bottom: 60px;
+}
+
+.customize-input {
+    color: #EDF0F1;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid #EDF0F1;
+    outline: none;
+    width: 10%;
+    height: 100%;
+    margin: 0px 25px;
+    padding: 10px 5px;
+}
+
+.customize-select {
+    width: 20%;
+    cursor: pointer;
+}
+
+.FAQ-slot {
+    text-align: center;
+    margin: 60px auto;
+    border-bottom: 1px solid #EDF0F1;
+    width: 60%;
+}
+
+.FAQ-question {
+    font-weight: 300;
+    font-family: 'Lora', serif;
+    margin-bottom: 40px;
+}
+
+.FAQ-answer {
+    line-height: 35px;
+    margin-bottom: 60px;
+}
+
+footer {
+    color: #EDF0F1;
+    font-size: 20px;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+    position: relative;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

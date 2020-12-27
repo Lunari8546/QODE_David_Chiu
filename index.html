@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- Metas -->
+        <meta charset="UTF-8">
+        <meta name="author" content="David Chiu">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Timetabler, David Chiu, Lunari8546, QODE Internet Fest 2020">
+        <meta name="description" content="Creates clean timetables in no time.">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Title -->
+        <title>Timetabler</title>
+        <!-- CSS & JS Imports -->
+        <link rel="stylesheet" href="style.css">
+        <script src="./node_modules/html2canvas/dist/html2canvas.js"></script>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <header>
+            <h1 class="logo" onclick="interact(this.textContent)">Timetabler</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a id="pngButton">Save as PNG</a></li>
+                    <li><a onclick="interact(this.textContent)">Customize</a></li>
+                    <li><a onclick="interact(this.textContent)">FAQ</a></li>
+                    <li><a href="https://github.com/Lunari8546">Github</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="timetable-canvas" id="timetable-canvas">
+            <input type="text" class="timetable-title" placeholder="Unnamed Timetable" maxlength="18" />
+            <table class="timetable">
+                <tr>
+                    <td align="center" height="50" width="100">
+                        <input type="text" class="timetable-input" placeholder="Day & Period" maxlength="18" />
+                    </td>
+                    <td align="center" height="50" width="100">
+                        <input type="text" class="timetable-input" placeholder="9:30-10:20" maxlength="18" />
+                    </td>
+                    <td align="center" height="50" width="100">
+                        <input type="text" class="timetable-input" placeholder="10:20-11:10" maxlength="18" />
+                    </td>
+                    <td align="center" height="50" width="100">
+                        <input type="text" class="timetable-input" placeholder="11:00-12:00" maxlength="18" />
+                    </td>
+                    <td align="center" height="50" width="100">
+                        <input type="text" class="timetable-input" placeholder="12:00-12:40" maxlength="18" />
+                    </td>
+                    <td align="center" height="50" width="100">
+                        <input type="text" class="timetable-input" placeholder="12:40-13:30" maxlength="18" />
+                    </td>
+                    <td align="center" height="50" width="100">
+                        <input type="text" class="timetable-input" placeholder="13:00-14:20" maxlength="18" />
+                    </td>
+                    <td align="center" height="50" width="100">
+                        <input type="text" class="timetable-input" placeholder="14:20-15:10" maxlength="18" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" height="50">
+                        <b>Monday</b>
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" height="50">
+                        <b>Tuesday</b>
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" height="50">
+                        <b>Wednesday</b>
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" height="50">
+                        <b>Thursday</b>
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" height="50">
+                        <b>Friday</b>
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" height="50">
+                        <b>Saturday</b>
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center" height="50">
+                        <b>Sunday</b>
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                    <td align="center" height="50">
+                        <input type="text" class="timetable-input" maxlength="18" />
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section class="customize-section" id="customize-section">
+            <div class="customize-slot">
+                <h1 class="customize-title">Border :</h1>
+                <div class="customize-settings">
+                    <label class="customize-label">
+                        <span class="customize-label-name">Border Width (px)</span>
+                    </label>
+                    <input type="number" class="customize-input" onkeyup="saveBorderWidth(this.value)" value="1" oninput="inputLimitCharacters(this)" />
+                </div>
+                <div class="customize-settings">
+                    <label class="customize-label">
+                        <span class="customize-label-name">Border Top Padding (px)</span>
+                    </label>
+                    <input type="number" class="customize-input" onkeyup="saveBorderTopPadding(this.value)" value="10" oninput="inputLimitCharacters(this)" />
+                    <label class="customize-label">
+                        <span class="customize-label-name">Border Bottom Padding (px)</span>
+                    </label>
+                    <input type="number" class="customize-input" onkeyup="saveBorderBottomPadding(this.value)" value="10" oninput="inputLimitCharacters(this)" />
+                    <label class="customize-label">
+                        <span class="customize-label-name">Border Left Padding (px)</span>
+                    </label>
+                    <input type="number" class="customize-input" onkeyup="saveBorderLeftPadding(this.value)" value="10" oninput="inputLimitCharacters(this)" />
+                    <br>
+                    <label class="customize-label">
+                        <span class="customize-label-name">Border Right Padding (px)</span>
+                    </label>
+                    <input type="number" class="customize-input" onkeyup="saveBorderRightPadding(this.value)" value="10" oninput="inputLimitCharacters(this)" />
+                </div>
+            </div>
+            <div class="customize-slot">
+                <h1 class="customize-title">Theme :</h1>
+                <div class="customize-settings">
+                    <label class="customize-label">
+                        <span class="customize-label-name">Title Font</span>
+                    </label>
+                    <select class="customize-input customize-select" onchange="saveTitleFont(this.value)">
+                        <option value="lora">Lora</option>
+                        <option value="titillium_web">Titillium Web</option>
+                        <option value="open_sans">Open Sans</option>
+                        <option value="old_standard_tt">Old Standard TT</option>
+                        <option value="pt_mono">PT Mono</option>
+                        <option value="gravitas_one">Gravitas One</option>
+                    </select>
+                    <label class="customize-label">
+                        <span class="customize-label-name">Timetable Font</span>
+                    </label>
+                    <select class="customize-input customize-select" onchange="saveTimetableFont(this.value)">
+                        <option value="titillium_web">Titillium Web</option>
+                        <option value="lora">Lora</option>
+                        <option value="open_sans">Open Sans</option>
+                        <option value="old_standard_tt">Old Standard TT</option>
+                        <option value="pt_mono">PT Mono</option>
+                        <option value="gravitas_one">Gravitas One</option>
+                    </select>
+                </div>
+            </div>
+            <div class="customize-slot">
+                <h1 class="customize-title">Miscellaneous :</h1>
+                <div class="customize-settings">
+                    <label class="customize-label">
+                        <span class="customize-label-name">Column Size (Must be larger than 1 & less than 10)</span>
+                    </label>
+                    <input type="number" class="customize-input" onkeyup="saveColumnSize(this.value)" value="8" oninput="inputLimitCharacters(this)" />
+                </div>
+            </div>
+        </section>
+        <section class="FAQ-section" id="FAQ-section">
+            <div class="FAQ-slot">
+                <h1 class="FAQ-question">Why the timetable in PNG format looks weird or distorted?</h1>
+                <p class="FAQ-answer">
+                    The main reason is because your device's width is not wide enough.<br>
+                    If you're a moblie user, check "Desktop Web" as true.<br>
+                    If you're a desktop or laptop user, zoom the whole page out and it should work.
+                </p>
+            </div>
+            <div class="FAQ-slot">
+                <h1 class="FAQ-question">Why timetable.png cannot be opened?</h1>
+                <p class="FAQ-answer">
+                    You're either in FAQ or Customize, press the logo (top-left corner) to enable back the timetable.
+                </p>
+            </div>
+        </section>
+    </body>
+    <script src="app.js"></script>
+    <footer class="copyright">
+        <!-- Copyright Notice -->
+        <p>© Copyright 2020, David Chiu. All Rights Reserved.</p>
+    </footer>
+    <!-- Custom Scrollbar -->
+    <style>
+        ::-webkit-scrollbar {
+            width: 20px;
+        }
+    
+        ::-webkit-scrollbar-track {
+            background: #808080;
+            border-radius: 0px;
+        }
+    
+        ::-webkit-scrollbar-thumb {
+            background: #EDF0F1;
+            border-radius: 0px;
+        }
+    </style>
+</html>
